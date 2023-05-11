@@ -9,7 +9,7 @@ $contenu = '';
 $suppressionErreur = '<div class="alert alert-danger">La suppression n\'est pas autorisé tant qu\'il y a une relation associé dans la table <a href="?page=emprunt">emprunt</a></div>'; 
 $suppressionValide = '<div class="alert alert-success">L\'élément a bien été supprimé</div>';
 
-$enregistrementErreur = '<div class="alert alert-danger">Impossible d\'enregistrer l\'emprunt : la durée d\'emprunt ne doit pas dépasser 30 jours.</div>'; 
+$enregistrementErreur = '<div class="alert alert-danger">Impossible d\'enregistrer l\'emprunt. Veuillez vérifier les conditions suivantes : un abonné ne peut emprunter plus de 5 livres à la fois et la durée d\'emprunt ne doit pas dépasser 30 jours.</div>'; 
 $enregistrementValide = '<div class="alert alert-success">L\'élément a bien été enregistré</div>';
 
 //------------------------------------------------------------------------------------------
