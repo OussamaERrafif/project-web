@@ -12,26 +12,37 @@ $page_title = "Accueil";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 		<script>  $(document).ready(function() {  $(".date").datepicker({ dateFormat: "yy/mm/dd" }).val()  });</script>
     <style>
-      section {
-        background-color: #f2f2f2;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 600px;
-      }
+section {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    h2 {
-      color: #333;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
+h2 {
+  color: #333;
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    p {
-      color: #666;
-      font-size: 1.2em;
-      margin-bottom: 0;
-    }
+p {
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
 
     </style>
 	</head>
