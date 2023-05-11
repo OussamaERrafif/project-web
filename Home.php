@@ -11,6 +11,29 @@ $page_title = "Accueil";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 		<script>  $(document).ready(function() {  $(".date").datepicker({ dateFormat: "yy/mm/dd" }).val()  });</script>
+    <style>
+      section {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+    h2 {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      font-size: 1.2em;
+      margin-bottom: 0;
+    }
+
+    </style>
 	</head>
 <main>
   <section>

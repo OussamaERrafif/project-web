@@ -57,12 +57,26 @@ body {
   }
   
   section {
-    margin-bottom: 40px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
   }
   
-  section h2 {
-    margin-bottom: 20px;
+  h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
   }
+  
+  p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+  
   
   .card {
     display: flex;
