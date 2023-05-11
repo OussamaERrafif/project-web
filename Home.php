@@ -1,9 +1,18 @@
 <?php
+require('inc/init.inc.php');
+if(isset($_GET['page']) && $_GET['page'] == 'abonne') require('abonne.php');
+if(isset($_GET['page']) && $_GET['page'] == 'livre') require('livre.php');
+if(isset($_GET['page']) && $_GET['page'] == 'emprunt') require('emprunt.php');
+if(isset($_GET['page']) && $_GET['page'] == 'Home') require('Home.php');
+if(isset($_GET['page']) && $_GET['page'] == 'recherche') require('recherche.php');
+
+?>
+<?php
 $page_title = "Accueil";
 ?>
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>TP Bibliotheque</title>
+		<title>project web</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
     <link href="css/try.css" rel="stylesheet" type="text/css">
@@ -18,7 +27,7 @@ section {
   border-radius: 5px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,37 +55,99 @@ p {
 
     </style>
 	</head>
+  <header>
+			<nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg bg-body-tertiary" style="background-color: #FFC0CB;">
+				  <div class="container-fluid">
+					  <div id="navbar-brand" class="collapse navbar-collapse">
+						  <ul class="nav nav-tabs">
+							<li class="nav-item"><p class="navbar-brand" >Biblioteca</p></li>
+							<li class="nav-item"><a class="nav-link active" href="?page=Home">Accueil</a></li>
+							<li class="nav-item"><a class="nav-link active" href="?page=abonne">Abonné</a></li>
+							<li class="nav-item"><a class="nav-link active" href="?page=livre">Livre</a></li>
+							<li class="nav-item"><a class="nav-link active" href="?page=recherche">Recherche</a></li>
+							<li class="nav-item"><a class="nav-link active" href="?page=emprunt">Emprunt</a></li>
+							
+						</ul>
+					</div>
+				  </div>
+			</nav>
+		</header>
 <main>
   <section>
+    <?php
+    if(isset($_GET['page'])){
+      echo $contenu;
+    }else{
+      echo "
+      <section>
     <h2>Bienvenue dans notre bibliothèque</h2>
     <p>Gérez les livres, les abonnés et les emprunts en toute simplicité.</p>
   </section>
 
   <section>
     <h2>Derniers livres ajoutés</h2>
-    <div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/img1.jpg" class="d-block w-100" alt="">
+    <div id=\"carouselExample\" class=\"carousel slide\">
+  <div class=\"carousel-inner\">
+    <div class=\"carousel-item active\">
+      <img src=\"img/img1.jpg\" class=\"d-block w-100\" alt=\"\">
     </div>
-    <div class="carousel-item">
-      <img src="img/img2.jpg" class="d-block w-100" alt="">
+    <div class=\"carousel-item\">
+      <img src=\"img/img2.jpg\" class=\"d-block w-100\" alt=\"\">
     </div>
-    <div class="carousel-item">
-      <img src="img/img3.jpg" class="d-block w-100" alt="">
+    <div class=\"carousel-item\">
+      <img src=\"img/img3.jpg\" class=\"d-block w-100\" alt=\"\">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"\#carouselExample\" data-bs-slide=\"prev\">
+    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+    <span class=\"visually-hidden\">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"\#carouselExample\" data-bs-slide=\"next\">
+    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+    <span class=\"visually-hidden\">Next</span>
   </button>
 </div>
     </div>
   </section>
+      ";
+    }
+    ?>
+<!-- //   </section>
+//   <section>
+//     <h2>Bienvenue dans notre bibliothèque</h2>
+//     <p>Gérez les livres, les abonnés et les emprunts en toute simplicité.</p>
+//   </section>
+
+//   <section>
+//     <h2>Derniers livres ajoutés</h2>
+//     <div id="carouselExample" class="carousel slide">
+//   <div class="carousel-inner">
+//     <div class="carousel-item active">
+//       <img src="img/img1.jpg" class="d-block w-100" alt="">
+//     </div>
+//     <div class="carousel-item">
+//       <img src="img/img2.jpg" class="d-block w-100" alt="">
+//     </div>
+//     <div class="carousel-item">
+//       <img src="img/img3.jpg" class="d-block w-100" alt="">
+//     </div>
+//   </div>
+//   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+//     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+//     <span class="visually-hidden">Previous</span>
+//   </button>
+//   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+//     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+//     <span class="visually-hidden">Next</span>
+//   </button>
+// </div>
+//     </div>
+//   </section>
+//   <section>
+// 			<div class="container">
+// 				<?php echo $contenu; ?>
+// 			</div>
+// 		</section> -->
 </main>
 
 <?php
